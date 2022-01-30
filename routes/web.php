@@ -20,4 +20,8 @@ Route::get('/', function () {
 
 Route::get('about',function(){
     return 'About';
-}
+});
+
+Route::get('about',function(){
+    return 'rtrtr';
+});
