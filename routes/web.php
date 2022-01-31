@@ -25,3 +25,4 @@ Route::get('about',function(){
 Route::get('about',function(){
     return 'rtrtr';
 });
+Route::get('fff', function() {});
