@@ -1,28 +1,25 @@
 <?php
 
+use App\Http\Controllers\Site1Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\controllers\Sitecontroller;
+use App\Http\controllers\StudentController;
+use App\Http\controllers\TestController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::prefix('site1')->group(function() {
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+
+    Route::get('/', [Site1Controller::class, 'index'])
+    ->name('site1home');
+
+    Route::get('/about', [Site1Controller::class, 'about'])
+    ->name('about434');
+
+    Route::get('/contact', [Site1Controller::class, 'contact'])
+    ->name('contact996');
+
+    Route::get('/services', [Site1Controller::class, 'services'])
+    ->name('services669');
 });
-
-
-Route::get('about',function(){
-    return 'About';
-});
-
-Route::get('about',function(){
-    return 'rtrtr';
-});
-Route::get('fff', function() {});
